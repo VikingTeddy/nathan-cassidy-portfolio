@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nathan Cassidy | Gameplay Programmer & Designer</title>
+  <meta name="description" content="Portfolio of Nathan Cassidy, a Computer Games Development student at the University of Westminster focused on gameplay programming and design in Unity and C#.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="nav-logo" id="navLogo">Nathan <span>Cassidy</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow" id="heroRole"></p>
+        <h1 class="hero-name"><span id="heroFirst"></span><span class="accent" id="heroLast"></span></h1>
+        <p class="hero-intro" id="heroIntro"></p>
+        <div class="cta">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+        <div class="chips" id="heroSkills" aria-label="Core skills"></div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img id="heroPhoto" alt="Portrait of Nathan Cassidy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section-label">About</h2>
+      <div class="about-grid">
+        <div class="about-text" id="aboutText"></div>
+        <div class="skills-panel">
+          <h3>Core skills</h3>
+          <div class="chips" id="skillsPrimary"></div>
+          <h3>Also work with</h3>
+          <div class="chips" id="skillsSecondary"></div>
+          <h3>Currently learning</h3>
+          <div class="chips" id="skillsLearning"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="section-label">Projects</h2>
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2 class="section-label">Experience &amp; Education</h2>
+      <div class="two-col">
+        <div>
+          <h3 class="col-title">Work experience</h3>
+          <div class="timeline" id="expList"></div>
+        </div>
+        <div>
+          <h3 class="col-title">Education</h3>
+          <div class="timeline" id="eduList"></div>
+        </div>
+      </div>
+      <h3 class="col-title achievements-title">Achievements &amp; certifications</h3>
+      <div class="achievements" id="achList"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-label">Contact</h2>
+      <div class="contact">
+        <div>
+          <h3 class="contact-head">Let's <span class="accent">connect</span></h3>
+          <p class="contact-copy">I'm open to internships, placements, game jams and collaborations. The quickest way to reach me is by email or LinkedIn.</p>
+        </div>
+        <div class="contact-cards" id="contactCards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="footerName"></span>
+    <span id="footerUpdated"></span>
+  </footer>
+
+  <!-- Project detail dialog -->
+  <dialog class="modal" id="projectModal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
