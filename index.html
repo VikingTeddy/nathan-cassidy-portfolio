@@ -1,116 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nathan Cassidy | Gameplay Programmer & Designer</title>
-  <meta name="description" content="Portfolio of Nathan Cassidy, a Computer Games Development student at the University of Westminster focused on gameplay programming and design in Unity and C#.">
-  <meta name="theme-color" content="#0d1117">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concept C: Showreel</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07080A}
+a{color:inherit;text-decoration:none}a:hover{color:#FFFFFF}
+</style>
+
+<style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
 
-  <header class="nav" id="nav">
-    <a href="#home" class="nav-logo" id="navLogo">Nathan <span>Cassidy</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<div style="--accent: #4DE1FF; background:#07080A; color:#F4F6F8; font-family:'Inter',system-ui,sans-serif; line-height:1.6; min-height:100%;">
 
-  <main>
-    <!-- HOME -->
-    <section class="hero" id="home">
-      <div class="hero-text">
-        <p class="eyebrow" id="heroRole"></p>
-        <h1 class="hero-name"><span id="heroFirst"></span><span class="accent" id="heroLast"></span></h1>
-        <p class="hero-intro" id="heroIntro"></p>
-        <div class="cta">
-          <a href="#projects" class="btn btn-primary">View my work</a>
-          <a href="#contact" class="btn btn-outline">Get in touch</a>
-        </div>
-        <div class="chips" id="heroSkills" aria-label="Core skills"></div>
-      </div>
-      <div class="hero-photo">
-        <div class="photo-frame">
-          <img id="heroPhoto" alt="Portrait of Nathan Cassidy">
+  <!-- Full-bleed reel hero -->
+  <section style="position:relative; height:800px; overflow:hidden;">
+    <img src="assets/neon-ascent.gif" alt="Neon Ascent gameplay: a runner crossing neon city rooftops" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+    <div style="position:absolute; inset:0; background:rgba(7,8,10,0.72);"></div>
+    <div style="position:relative; z-index:1; height:100%; max-width:1280px; margin:0 auto; padding:0 48px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between;">
+      <header style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; padding-top:32px;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px;">Nathan Cassidy</span>
+        <nav style="display:flex; flex-wrap:wrap; gap:28px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <div style="padding-bottom:72px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:20px;">Now playing: Neon Ascent</div>
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(44px,8vw,112px); line-height:0.96; letter-spacing:-0.04em; margin:0 0 28px; max-width:1000px;">Gameplay you can feel.</h1>
+        <p style="font-size:20px; font-weight:300; max-width:600px; margin:0 0 32px; color:#E3E7EC;">Nathan Cassidy is a gameplay programmer and designer studying Computer Games Development at the University of Westminster.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+          <a href="#work" style="background:var(--accent); color:#07080A; font-weight:500; padding:14px 26px; border-radius:6px;">See the work</a>
+          <a href="assets/Nathan_Cassidy_CV.pdf" style="border:1px solid #F4F6F8; font-weight:500; padding:14px 26px; border-radius:6px;">Download CV</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <h2 class="section-label">About</h2>
-      <div class="about-grid">
-        <div class="about-text" id="aboutText"></div>
-        <div class="skills-panel">
-          <h3>Core skills</h3>
-          <div class="chips" id="skillsPrimary"></div>
-          <h3>Also work with</h3>
-          <div class="chips" id="skillsSecondary"></div>
-          <h3>Currently learning</h3>
-          <div class="chips" id="skillsLearning"></div>
+  <!-- Work row -->
+  <section id="work" style="max-width:1280px; margin:0 auto; padding:96px 48px; box-sizing:border-box;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:16px; margin-bottom:40px;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; letter-spacing:-0.02em; margin:0;">Reel</h2>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#A9B1BC;">Three projects</div>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:24px;">
+      <div style="flex:1 1 260px; min-width:0;">
+        <div style="aspect-ratio:16/10; background:#12161C; border:1px solid #232A33; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:var(--accent); text-align:center; padding:0 16px; box-sizing:border-box;">Moon Miner</div>
+        <div style="font-size:18px; font-weight:500; margin-top:14px;">Moon Miner</div>
+        <div style="font-size:14px; color:#A9B1BC;">2D sandbox platformer · Unity</div>
+        <a href="moon-miner.html" style="display:inline-block; margin-top:8px; font-size:14px; color:var(--accent);">Case study →</a>
+      </div>
+      <div style="flex:1 1 260px; min-width:0;">
+        <img src="assets/neon-ascent.gif" alt="Neon Ascent gameplay" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block; border:1px solid #232A33;">
+        <div style="font-size:18px; font-weight:500; margin-top:14px;">Neon Ascent</div>
+        <div style="font-size:14px; color:#A9B1BC;">Endless runner · Unity</div>
+      </div>
+      <div style="flex:1 1 260px; min-width:0;">
+        <div style="aspect-ratio:16/10; background:#12161C; border:1px solid #232A33; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:var(--accent); text-align:center; padding:0 16px; box-sizing:border-box;">AI Datacentre</div>
+        <div style="font-size:18px; font-weight:500; margin-top:14px;">Interactive AI Datacentre</div>
+        <div style="font-size:14px; color:#A9B1BC;">Explorable 3D · Unity · In progress</div>
+        <a href="datacentre.html" style="display:inline-block; margin-top:8px; font-size:14px; color:var(--accent);">Concept &amp; case study →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="border-top:1px solid #232A33; border-bottom:1px solid #232A33; background:#0B0D10;">
+    <div style="max-width:1280px; margin:0 auto; padding:96px 48px; box-sizing:border-box; display:flex; flex-wrap:wrap; gap:56px;">
+      <div style="flex:1 1 420px; min-width:0;">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:40px; line-height:1.1; letter-spacing:-0.02em; margin:0 0 20px;">Built in Unity, tested on real players.</h2>
+        <p style="font-size:17px; font-weight:300; color:#C3CAD3; margin:0;">I handle gameplay programming, testing and 2D art on team projects, and I'm learning Unreal Engine this term. Outside games I've worked in document production and retail, which taught me to deliver to deadlines and talk clearly to people who aren't developers.</p>
+      </div>
+      <div style="flex:1 1 360px; min-width:0; display:flex; flex-direction:column; gap:20px;">
+        <div style="border-top:1px solid #232A33; padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">Now</div>
+          <div style="font-size:17px; font-weight:500;">Project Management Intern, Innova Wireless</div>
+        </div>
+        <div style="border-top:1px solid #232A33; padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">Studying</div>
+          <div style="font-size:17px; font-weight:500;">BSc Computer Games Development, University of Westminster</div>
+        </div>
+        <div style="border-top:1px solid #232A33; padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">Tools</div>
+          <div style="font-size:17px; font-weight:500;">Unity, C#, Git, Python, Java, Lua</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <h2 class="section-label">Projects</h2>
-      <div class="project-grid" id="projectGrid"></div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <h2 class="section-label">Experience &amp; Education</h2>
-      <div class="two-col">
-        <div>
-          <h3 class="col-title">Work experience</h3>
-          <div class="timeline" id="expList"></div>
-        </div>
-        <div>
-          <h3 class="col-title">Education</h3>
-          <div class="timeline" id="eduList"></div>
-        </div>
+  <!-- Skills, experience, education -->
+  <section style="max-width:1280px; margin:0 auto; padding:96px 48px; box-sizing:border-box; display:flex; flex-wrap:wrap; gap:48px;">
+    <div style="flex:1 1 300px; min-width:0;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; letter-spacing:-0.02em; margin:0 0 20px;">Skills</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <span style="padding:8px 14px; border-radius:999px; background:var(--accent); color:#07080A; font-size:14px; font-weight:500;">Unity</span>
+        <span style="padding:8px 14px; border-radius:999px; background:var(--accent); color:#07080A; font-size:14px; font-weight:500;">C#</span>
+        <span style="padding:8px 14px; border-radius:999px; background:var(--accent); color:#07080A; font-size:14px; font-weight:500;">Gameplay programming</span>
+        <span style="padding:8px 14px; border-radius:999px; border:1px solid #3A4450; font-size:14px;">Game design</span>
+        <span style="padding:8px 14px; border-radius:999px; border:1px solid #3A4450; font-size:14px;">Git</span>
+        <span style="padding:8px 14px; border-radius:999px; border:1px solid #3A4450; font-size:14px;">Python</span>
+        <span style="padding:8px 14px; border-radius:999px; border:1px solid #3A4450; font-size:14px;">Java</span>
+        <span style="padding:8px 14px; border-radius:999px; border:1px solid #3A4450; font-size:14px;">Lua</span>
       </div>
-      <h3 class="col-title achievements-title">Achievements &amp; certifications</h3>
-      <div class="achievements" id="achList"></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <h2 class="section-label">Contact</h2>
-      <div class="contact">
-        <div>
-          <h3 class="contact-head">Let's <span class="accent">connect</span></h3>
-          <p class="contact-copy">I'm open to internships, placements, game jams and collaborations. The quickest way to reach me is by email or LinkedIn.</p>
-        </div>
-        <div class="contact-cards" id="contactCards"></div>
+      <div style="font-size:14px; color:#A9B1BC; margin-top:16px;">Currently learning: Unreal Engine</div>
+    </div>
+    <div style="flex:1 1 300px; min-width:0;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; letter-spacing:-0.02em; margin:0 0 20px;">Experience</h2>
+      <div style="border-top:1px solid #232A33; padding:14px 0;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">Sep 2025 – now</div>
+        <div style="font-size:17px; font-weight:500;">Project Management Intern</div>
+        <div style="font-size:14px; color:#A9B1BC;">Innova Wireless</div>
       </div>
-    </section>
-  </main>
+      <div style="border-top:1px solid #232A33; padding:14px 0;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">Nov 2023 – Aug 2024</div>
+        <div style="font-size:17px; font-weight:500;">Customer Assistant</div>
+        <div style="font-size:14px; color:#A9B1BC;">Booths</div>
+      </div>
+    </div>
+    <div style="flex:1 1 300px; min-width:0;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; letter-spacing:-0.02em; margin:0 0 20px;">Education</h2>
+      <div style="border-top:1px solid #232A33; padding:14px 0;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">2025 – now</div>
+        <div style="font-size:17px; font-weight:500;">BSc Computer Games Development</div>
+        <div style="font-size:14px; color:#A9B1BC;">University of Westminster</div>
+      </div>
+      <div style="border-top:1px solid #232A33; padding:14px 0;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">Award</div>
+        <div style="font-size:17px; font-weight:500;">Westminster Award: Bronze</div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <span id="footerName"></span>
-    <span id="footerUpdated"></span>
-  </footer>
+  <!-- Contact -->
+  <section id="contact" style="max-width:1280px; margin:0 auto; padding:96px 48px; box-sizing:border-box; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:32px;">
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(36px,6vw,80px); line-height:1; letter-spacing:-0.04em; margin:0;">Let's build<br>something.</h2>
+    <div style="display:flex; flex-direction:column; gap:12px; font-size:18px;">
+      <a href="mailto:nathanjustincassidy@gmail.com" style="color:var(--accent); word-break:break-all;">nathanjustincassidy@gmail.com</a>
+      <a href="https://www.linkedin.com/in/nathan-cassidy-05390b349/">LinkedIn ↗</a>
+    </div>
+  </section>
 
-  <!-- Project detail dialog -->
-  <dialog class="modal" id="projectModal">
-    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-    <div id="modalBody"></div>
-  </dialog>
+</div>
 
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>

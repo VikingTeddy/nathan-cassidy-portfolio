@@ -65,3 +65,6 @@ Put screenshots or GIFs in `assets/` and set `media: "assets/your-file.gif"` on 
 ## Confidentiality
 
 Keep client names, proposal details and anything covered by an NDA out of this repository. A public repo can be read by anyone, including its history.
+
+## Update (Nov 2026): Showreel redesign
+The site is now three plain HTML pages with inline styles: `index.html` (home), `datacentre.html` and `moon-miner.html` (case studies). Edit text directly in those files. Items in [BRACKETS] are placeholders to replace with your own details and screenshots. The old `css/` and `js/` data-driven version is no longer used by these pages.
